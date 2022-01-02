@@ -36,7 +36,6 @@ function mathPiFloor(num,flo){
     // ** = Math.pow
     document.querySelector('#mathPiFloor2').textContent = `保留小數點下${flo}位= ${Math.floor(Math.PI * Math.pow(10,flo)) / Math.pow(10,flo)}`
 
-
 }
 mathPiFloor(Math.PI,3)
 
