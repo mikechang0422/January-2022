@@ -57,19 +57,19 @@ let countDown = function(due) {
     return count
 }
 
+let goal = new Date()
+goal.setHours(24)
+goal.setMinutes(0)
+goal.setSeconds(0)
 
 let counter = function(){
-    let goal = new Date()
-    goal.setHours(24)
-    goal.setMinutes(0)
-    goal.setSeconds(0)
 
     document.querySelector('#setTime').textContent = `${countDown(goal)[1]}小時${countDown(goal)[2]}分${countDown(goal)[3]}秒`
 }
 
 setInterval(()=>{
     counter()
-},1000)
+},500)
 
 let getNewYear = function(){
     let newYear = new Date(2024,1,1)
