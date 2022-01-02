@@ -90,7 +90,6 @@ let getNewYear = function(){
 
 function setNewYear(){
     getNewYear()
-    console.log(getNewYear())
     document.querySelector('#setTime2').textContent = `${getNewYear(0)[0]}月${getNewYear(0)[1]}日${getNewYear(0)[2]}小時${getNewYear(0)[3]}分${getNewYear(0)[4]}秒`
 }
 setInterval(()=>{
