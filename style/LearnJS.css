@@ -77,6 +77,11 @@ ul li {
   font-size: 2rem;
 }
 
+label {
+  font-size: 2rem;
+  color: #f0f8ff;
+}
+
 @media (max-width: 768px) {
   html {
     font-size: 55%;

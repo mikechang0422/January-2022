@@ -73,6 +73,11 @@ ul {
     }
 }
 
+label {
+    font-size: 2rem;
+    color: $text-color;
+}
+
 @media (max-width: 768px) {
     html {
         font-size: 55%;

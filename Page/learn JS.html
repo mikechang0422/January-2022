@@ -27,7 +27,47 @@
             <p>距離明天還有: <span id="setTime"></span></p>
             <p>距離2023還有: <span id="setTime2"></span></p>
         </section>
+        <section>
+            <form id="form1">
+                <select name="select">
+                    <option value="#ch">中文</option>
+                    <option value="#en">英文</option>
+                    <option value="#jp">日文</option>
+                </select>
+
+                <h2>下拉選單切換頁面</h2>
+                <p>Start</p>
+                <p style="height:35vh;" id="ch">中文頁面</p>
+                <p style="height:35vh;" id="en">英文頁面</p>
+                <p style="height:35vh;" id="jp">日文頁面</p>
+                <p>End</p>
+            </form>
+        </section>
+        <section>
+            <h2>radio + submit</h2>
+            <form id="form2">
+                <p>每周外食次數</p>
+                <p>
+                    <label>
+                        <input type="radio" name="frequency">1
+                    </label>
+                    <label>
+                        <input type="radio" name="frequency">2~3
+                    </label>
+                    <label>
+                        <input type="radio" name="frequency">>3
+                    </label>
+                    <label>
+                        <input type="radio" name="frequency">>7
+                    </label>
+                    <input type="submit" name="送出" value="送出" id="form2submit">
+                    <input type="button" value="刪除cookies" id="form2remove">
+                </p>
+                <p id="form2Ans">請回復</p>
+            </form>
+        </section>
     </div>
+    <script src="../js/cookie.js"></script>
     <script src="../js/LearnJS.js"></script>
 </body>
 </html>

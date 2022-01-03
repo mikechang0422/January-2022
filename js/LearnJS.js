@@ -95,3 +95,28 @@ function setNewYear(){
 setInterval(()=>{
     setNewYear()
 },1000)
+
+// Select 跳轉
+let form1 = document.querySelector('#form1')
+form1.select.onchange // 當select變化時 這裡的select是name屬性
+= function(){ //啟動以下的匿名函式
+        location.href = form1.select.value
+    }
+
+// radio 用法
+let form2 = document.querySelector('#form2')
+let form2Ans = document.querySelector('#form2Ans')
+form2.onsubmit = function (){
+    if(Cookies.get('answered') === 'yes'){
+        form2Ans.textContent = '已回復'
+        return false
+    }
+    else{
+        Cookies.set('answered','yes',{expires:7})
+        form2Ans.textContent = '感謝回復'
+    }
+}
+document.querySelector('#form2remove').onclick = function(){
+    Cookies.remove('answered')
+    form2Ans.textContent = '請重新作答'
+}
