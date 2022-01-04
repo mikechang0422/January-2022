@@ -114,6 +114,41 @@ label {
   cursor: pointer;
 }
 
+.slide {
+  margin: 0 auto;
+  width: 720px;
+  text-align: center;
+  background-color: #3333;
+  border: 1px solid;
+}
+
+.slide img {
+  margin: 1rem;
+  max-width: 100%;
+  border-radius: 1rem;
+}
+
+.slide .toolbar {
+  overflow: hidden;
+  text-align: center;
+}
+
+.slide .toolbar .nav {
+  display: inline-block;
+}
+
+.slide .toolbar .nav #prev,
+.slide .toolbar .nav #next {
+  float: left;
+  cursor: pointer;
+  margin: 1rem;
+}
+
+.slide .toolbar .nav #prev i,
+.slide .toolbar .nav #next i {
+  font-size: 4rem;
+}
+
 @media (max-width: 768px) {
   html {
     font-size: 55%;

@@ -107,6 +107,40 @@ label {
     }
 }
 
+.slide {
+    margin: 0 auto;
+    width: 720px;
+    text-align: center;
+    background-color: #3333;
+    border: 1px solid;
+
+    img {
+        margin: 1rem;
+        max-width: 100%;
+        border-radius: 1rem;
+    }
+
+    .toolbar {
+        overflow: hidden;
+        text-align: center;
+
+        .nav {
+            display: inline-block;
+
+            #prev,
+            #next {
+                float: left;
+                cursor: pointer;
+                margin: 1rem;
+
+                i {
+                    font-size: 4rem;
+                }
+            }
+        }
+    }
+}
+
 @media (max-width: 768px) {
     html {
         font-size: 55%;

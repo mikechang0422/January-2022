@@ -122,12 +122,52 @@ document.querySelector('#form2remove').onclick = function(){
 }
 
 // 切換img
+function changeImg (){
+    let thumbs = document.querySelectorAll('.thumb')
+    let showData = document.querySelector('.showData')
+    let bigmg = document.querySelector('#bigmg')
+    thumbs.forEach(e => e.onclick = 
+        function(){
+            showData.textContent ='現在展示的是: ' + this.dataset.image
+            bigmg.src = this.dataset.image
+        })
+}
+changeImg()
 
-let thumbs = document.querySelectorAll('.thumb')
-let showData = document.querySelector('.showData')
-let bigmg = document.querySelector('#bigmg')
-thumbs.forEach(e => e.onclick = 
-    function(){
-        showData.textContent ='現在展示的是: ' + this.dataset.image
-        bigmg.src = this.dataset.image
-    })
+//banner
+// let bannerImg = ['https://picsum.photos/200/200?random=5','https://picsum.photos/200/200?random=6','https://picsum.photos/200/200?random=7','https://picsum.photos/200/200?random=8','https://picsum.photos/200/200?random=9']
+
+// let current = 0
+// let changeImage = function(num){
+//     if(current + num >= 0 && current + num < bannerImg.length){
+//         current += num
+//         document.querySelector('#mainimage').src = bannerImg[current]
+//     } else if(current + num >= bannerImg.length){
+//         current = 0
+//         document.querySelector('#mainimage').src = bannerImg[current]
+//     } else if(current + num <= 0){
+//         current = 4
+//         document.querySelector('#mainimage').src = bannerImg[current]
+//     }
+// }
+// document.querySelector('#prev').onclick = function(){
+//     changeImage(-1)
+// }
+// document.querySelector('#next').onclick = function(){
+//     changeImage(1)
+// }
+
+// banner另類寫法 設定起始 直接把網址塞給他
+
+let bannerImageUrlNum = 5
+
+document.querySelector('#prev').onclick = function(){
+    if(!bannerImageUrlNum == 0){
+        bannerImageUrlNum = bannerImageUrlNum -1
+        document.querySelector('#mainimage').src = `https://picsum.photos/200/200?random=${bannerImageUrlNum}`
+    }
+}
+document.querySelector('#next').onclick = function(){
+    bannerImageUrlNum = bannerImageUrlNum +1
+    document.querySelector('#mainimage').src = `https://picsum.photos/200/200?random=${bannerImageUrlNum}`
+}
