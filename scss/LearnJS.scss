@@ -78,6 +78,35 @@ label {
     color: $text-color;
 }
 
+.secImg {
+    img {
+        margin: 1rem;
+        max-width: 100%;
+        border-radius: 1rem;
+
+        &#bigmg {
+            width: 400px;
+            text-align: center;
+            transition: 0.3s linear;
+        }
+    }
+
+    .center {
+        margin: 0 auto;
+        width: 50%;
+    }
+
+    ul {
+        display: flex;
+        gap: 1rem;
+    }
+
+    li {
+        flex: 1;
+        cursor: pointer;
+    }
+}
+
 @media (max-width: 768px) {
     html {
         font-size: 55%;

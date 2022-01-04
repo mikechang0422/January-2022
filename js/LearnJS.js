@@ -120,3 +120,14 @@ document.querySelector('#form2remove').onclick = function(){
     Cookies.remove('answered')
     form2Ans.textContent = '請重新作答'
 }
+
+// 切換img
+
+let thumbs = document.querySelectorAll('.thumb')
+let showData = document.querySelector('.showData')
+let bigmg = document.querySelector('#bigmg')
+thumbs.forEach(e => e.onclick = 
+    function(){
+        showData.textContent ='現在展示的是: ' + this.dataset.image
+        bigmg.src = this.dataset.image
+    })

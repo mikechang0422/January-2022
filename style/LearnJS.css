@@ -82,6 +82,38 @@ label {
   color: #f0f8ff;
 }
 
+.secImg img {
+  margin: 1rem;
+  max-width: 100%;
+  border-radius: 1rem;
+}
+
+.secImg img#bigmg {
+  width: 400px;
+  text-align: center;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+
+.secImg .center {
+  margin: 0 auto;
+  width: 50%;
+}
+
+.secImg ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+}
+
+.secImg li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  cursor: pointer;
+}
+
 @media (max-width: 768px) {
   html {
     font-size: 55%;
