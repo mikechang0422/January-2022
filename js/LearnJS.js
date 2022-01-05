@@ -135,39 +135,49 @@ function changeImg (){
 changeImg()
 
 //banner
-// let bannerImg = ['https://picsum.photos/200/200?random=5','https://picsum.photos/200/200?random=6','https://picsum.photos/200/200?random=7','https://picsum.photos/200/200?random=8','https://picsum.photos/200/200?random=9']
+let bannerImg = ['https://picsum.photos/200/200?random=5','https://picsum.photos/200/200?random=6','https://picsum.photos/200/200?random=7','https://picsum.photos/200/200?random=8','https://picsum.photos/200/200?random=9']
 
-// let current = 0
-// let changeImage = function(num){
-//     if(current + num >= 0 && current + num < bannerImg.length){
-//         current += num
-//         document.querySelector('#mainimage').src = bannerImg[current]
-//     } else if(current + num >= bannerImg.length){
-//         current = 0
-//         document.querySelector('#mainimage').src = bannerImg[current]
-//     } else if(current + num <= 0){
-//         current = 4
-//         document.querySelector('#mainimage').src = bannerImg[current]
-//     }
-// }
-// document.querySelector('#prev').onclick = function(){
-//     changeImage(-1)
-// }
-// document.querySelector('#next').onclick = function(){
-//     changeImage(1)
-// }
+let current = 0
+let changeImage = function(num){
+    if(current + num >= 0 && current + num < bannerImg.length){
+        current += num
+        document.querySelector('#mainimage').src = bannerImg[current]
+    } else if(current + num >= bannerImg.length){
+        current = 0
+        document.querySelector('#mainimage').src = bannerImg[current]
+    } else if(current + num <= 0){
+        current = 4
+        document.querySelector('#mainimage').src = bannerImg[current]
+    }
+}
+document.querySelector('#prev').onclick = function(){
+    changeImage(-1)
+}
+document.querySelector('#next').onclick = function(){
+    changeImage(1)
+}
+
+// 增加預存功能 提早載下來以免loading過久
+let preloadImg = function(path){
+    let imgTag = document.createElement('img')
+    imgTag.src = path
+}
+
+for(i=0;i<bannerImg.length;i++){
+    preloadImg(bannerImg[i])
+}
 
 // banner另類寫法 設定起始 直接把網址塞給他
 
-let bannerImageUrlNum = 5
+// let bannerImageUrlNum = 5
 
-document.querySelector('#prev').onclick = function(){
-    if(!bannerImageUrlNum == 0){
-        bannerImageUrlNum = bannerImageUrlNum -1
-        document.querySelector('#mainimage').src = `https://picsum.photos/200/200?random=${bannerImageUrlNum}`
-    }
-}
-document.querySelector('#next').onclick = function(){
-    bannerImageUrlNum = bannerImageUrlNum +1
-    document.querySelector('#mainimage').src = `https://picsum.photos/200/200?random=${bannerImageUrlNum}`
-}
+// document.querySelector('#prev').onclick = function(){
+//     if(!bannerImageUrlNum == 0){
+//         bannerImageUrlNum = bannerImageUrlNum -1
+//         document.querySelector('#mainimage').src = `https://picsum.photos/200/200?random=${bannerImageUrlNum}`
+//     }
+// }
+// document.querySelector('#next').onclick = function(){
+//     bannerImageUrlNum = bannerImageUrlNum +1
+//     document.querySelector('#mainimage').src = `https://picsum.photos/200/200?random=${bannerImageUrlNum}`
+// }
