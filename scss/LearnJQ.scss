@@ -22,19 +22,27 @@ body {
     justify-content: center;
     align-items: center;
     width: 100%;
+    flex-wrap: wrap;
+    flex-direction: column;
     min-height: 100vh;
     font-family: Lato, Butler, "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     background-color: #4b4b4b;
 }
 
+.warpper {
+    width: 100%;
+}
+
 h1 {
     padding: 2rem;
-    font-size: 15vw;
+    font-size: 10vw;
+    text-align: center;
+    color: $text-color;
     font-weight: 900;
     letter-spacing: 0.2rem;
     line-height: 1.5;
     text-transform: uppercase;
-    color: $text-color;
+    border-bottom: 1px solid;
 }
 
 h2 {
@@ -65,7 +73,6 @@ p {
 ul {
     margin-bottom: 1rem;
     color: $text-color;
-    border-bottom: 1px solid;
 
     li {
         margin-bottom: 1rem;
@@ -76,6 +83,25 @@ ul {
 label {
     font-size: 2rem;
     color: $text-color;
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    margin: 1rem;
+}
+
+.sec1 {
+    .showSpan1 {
+        &.hidden {
+            display: none;
+        }
+    }
+}
+
+.sec2 {
+    .showUl1 {
+        display: none;
+    }
 }
 
 @media (max-width: 768px) {

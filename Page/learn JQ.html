@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-Hent-TW">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -9,11 +10,34 @@
     <link rel="stylesheet" href="../style/LearnJQ.css">
     <title>Learning JQ</title>
 </head>
+
 <body>
     <div class="warpper">
         <h1>Learning JQ</h1>
+        <section class="sec1">
+            <h2>JQ入門</h2>
+            <p>JQ是一門很棒的Code寫法，可以讓你很精簡又很快速的開發功能<br />
+                <input class="btn" type="button" id="showSpan1Btn" value="顯示 / 隱藏"><br />
+                <span class="showSpan1" id="showSpan1">添加hidden以隱藏這段</sp>
+            </p>
+        </section>
+        <section class="sec2" style="margin-bottom: 200px;">
+            <h2>配合transation做動畫</h2>
+            <p>
+                <input class="btn" type="button" id="showUl1Btn" value="顯示 / 隱藏 UL" />
+            <ul class="showUl1" id="showUl1">
+                <li>這段會有動畫喔~</li>
+                <li>這段會有動畫喔~</li>
+                <li>這段會有動畫喔~</li>
+                <li>這段會有動畫喔~</li>
+                <li>這段會有動畫喔~</li>
+            </ul>
+            </p>
+        </section>
     </div>
+
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
     <script src="../js/LearnJQ.js"></script>
 </body>
+
 </html>
