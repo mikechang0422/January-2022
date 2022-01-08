@@ -106,6 +106,57 @@ label {
   display: none;
 }
 
+.sec3 .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  overflow: hidden;
+  margin: 0 3rem;
+  gap: 2rem;
+}
+
+.sec3 .seminar {
+  position: relative;
+  padding: 4px;
+  margin: 1rem 1rem 1rem 0;
+  border: 1px solid;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.sec3 .seminar h2 {
+  margin-bottom: 2rem;
+  font-size: 3rem;
+}
+
+.sec3 .check {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 8px;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #0003;
+  border: 0;
+  cursor: pointer;
+}
+
+.sec3 .red {
+  background-color: #f00c;
+}
+
+.sec3 .green {
+  background-color: #0f0c;
+}
+
 @media (max-width: 768px) {
   html {
     font-size: 55%;

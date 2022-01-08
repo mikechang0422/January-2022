@@ -104,6 +104,51 @@ label {
     }
 }
 
+.sec3 {
+    .list {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        overflow: hidden;
+        margin: 0 3rem;
+        gap: 2rem;
+    }
+
+    .seminar {
+        position: relative;
+        padding: 4px;
+        margin: 1rem 1rem 1rem 0;
+        border: 1px solid;
+        flex: 1;
+
+        h2 {
+            margin-bottom: 2rem;
+            font-size: 3rem;
+        }
+    }
+
+    .check {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 8px;
+        margin: 0;
+        width: 100%;
+        text-align: center;
+        background-color: #0003;
+        border: 0;
+        cursor: pointer;
+    }
+
+    .red {
+        background-color: #f00c;
+    }
+
+    .green {
+        background-color: #0f0c;
+    }
+}
+
 @media (max-width: 768px) {
     html {
         font-size: 55%;
