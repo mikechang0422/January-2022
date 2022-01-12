@@ -1,0 +1,123 @@
+@import url("https://use.fontawesome.com/releases/v5.15.3/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap");
+@import url("../font/Butler_Webfont/stylesheet.css");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  font-size: 125%;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  font-family: Lato, Butler, "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-color: #c9c9c9;
+  -webkit-perspective: 30rem;
+          perspective: 30rem;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.warpper {
+  width: inherit;
+  height: inherit;
+}
+
+.warpper h2 {
+  margin-bottom: 1rem;
+  width: 100%;
+  font-size: 3rem;
+  text-align: center;
+  color: #333;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.2rem;
+}
+
+.warpper .container {
+  margin: auto;
+  width: 80%;
+}
+
+.warpper .container > div {
+  overflow: hidden;
+  height: 6rem;
+  font-size: 6rem;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.warpper .container > div > span {
+  display: block;
+  height: 6rem;
+  font-size: 6rem;
+  text-align: center;
+  color: #333;
+  -webkit-transition: 0.3s  ease-in-out;
+  transition: 0.3s  ease-in-out;
+  font-weight: 400;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.warpper .container > div:nth-child(1) {
+  background-color: rgba(0, 0, 0, 0.2);
+  -webkit-transform: rotateX(30deg);
+          transform: rotateX(30deg);
+}
+
+.warpper .container > div:nth-child(2) {
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-transform: translateY(-0.5rem) rotateX(30deg);
+          transform: translateY(-0.5rem) rotateX(30deg);
+}
+
+.warpper .container > div:nth-child(3) {
+  background-color: rgba(0, 0, 0, 0.2);
+  -webkit-transform: translateY(-1rem) rotateX(-30deg);
+          transform: translateY(-1rem) rotateX(-30deg);
+}
+
+.warpper .container > div:nth-child(4) {
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-transform: translateY(-1.5rem) rotateX(-30deg);
+          transform: translateY(-1.5rem) rotateX(-30deg);
+}
+
+.warpper .container:hover > div > span {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  color: sandybrown;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+}
+
+@media (max-width: 540px) {
+  html {
+    font-size: 55%;
+  }
+}
+/*# sourceMappingURL=CSSFontStyle.css.map */

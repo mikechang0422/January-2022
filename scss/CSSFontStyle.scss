@@ -1,0 +1,112 @@
+@import url("https://use.fontawesome.com/releases/v5.15.3/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap");
+@import url("../font/Butler_Webfont/stylesheet.css");
+
+$text-color: #333;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+html {
+    font-size: 125%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    font-family: Lato, Butler, "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    background-color: #c9c9c9;
+    perspective: 30rem;
+    transform-style: preserve-3d;
+}
+
+.warpper {
+    width: inherit;
+    height: inherit;
+
+    h2 {
+        margin-bottom: 1rem;
+        width: 100%;
+        font-size: 3rem;
+        text-align: center;
+        color: $text-color;
+        font-weight: 700;
+        line-height: 1.5;
+        letter-spacing: 0.2rem;
+    }
+
+    .container {
+        margin: auto;
+        width: 80%;
+
+        > div {
+            overflow: hidden;
+            height: 6rem;
+            font-size: 6rem;
+            transform-style: preserve-3d;
+
+            > span {
+                display: block;
+                height: 6rem;
+                font-size: 6rem;
+                text-align: center;
+                color: $text-color;
+                transition: 0.3s  ease-in-out;
+                font-weight: 400;
+                letter-spacing: 0.2rem;
+                text-transform: uppercase;
+                transform-style: preserve-3d;
+            }
+
+            &:nth-child(1) {
+                background-color: rgba(0, 0, 0, 0.2);
+                transform: rotateX(30deg);
+            }
+
+            &:nth-child(2) {
+                background-color: rgba(0, 0, 0, 0.5);
+                transform: translateY(-0.5rem) rotateX(30deg);
+            }
+
+            &:nth-child(3) {
+                background-color: rgba(0, 0, 0, 0.2);
+                transform: translateY(-1rem) rotateX(-30deg);
+            }
+
+            &:nth-child(4) {
+                background-color: rgba(0, 0, 0, 0.5);
+                transform: translateY(-1.5rem) rotateX(-30deg);
+            }
+        }
+
+        &:hover {
+            > div {
+                > span {
+                    transform: translateY(-100%);
+                    color: sandybrown;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 62.5%;
+    }
+}
+
+@media (max-width: 540px) {
+    html {
+        font-size: 55%;
+    }
+}
