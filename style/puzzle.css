@@ -1,0 +1,162 @@
+@import url("https://use.fontawesome.com/releases/v5.15.3/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap");
+@import url("../font/Butler_Webfont/stylesheet.css");
+:root {
+  --width: 400px;
+  --height: 260px;
+  --puzzle-width: 80px;
+  --puzzle-height: 80px;
+  --offset-left: var(--width) * -1;
+  --moved: 0;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+  font-family: Lato, Butler, "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-color: #c9c9c9;
+}
+
+.captcha {
+  position: relative;
+  display: block;
+  width: var(--width);
+  height: var(--height);
+  background-position: center;
+  background-size: cover;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  background-image: url(https://images.unsplash.com/photo-1511044568932-338cba0ad803?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);
+}
+
+.captcha::before, .captcha::after {
+  position: absolute;
+  display: block;
+  width: inherit;
+  height: inherit;
+  background-position: inherit;
+  background-size: inherit;
+  content: "";
+  background-image: inherit;
+  -webkit-clip-path: inset(calc((var(--height) - var(--puzzle-height)) / 2) var(--puzzle-width) calc((var(--height) - var(--puzzle-height)) / 2) calc(var(--width) - var(--puzzle-width) * 2));
+  clip-path: inset(calc((var(--height) - var(--puzzle-height)) / 2) var(--puzzle-width) calc((var(--height) - var(--puzzle-height)) / 2) calc(var(--width) - var(--puzzle-width) * 2));
+}
+
+.captcha::before {
+  background-color: rgba(0, 0, 0, 0.6);
+  background-blend-mode: multiply;
+}
+
+.captcha::after {
+  -webkit-transform: translateX(clamp(calc(var(--width) * -1), calc(var(--width) * -1 + var(--moved)), calc(var(--puzzle-width))));
+          transform: translateX(clamp(calc(var(--width) * -1), calc(var(--width) * -1 + var(--moved)), calc(var(--puzzle-width))));
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+.captcha:active::after {
+  -webkit-transition: none;
+  transition: none;
+}
+
+.captcha.passed::before, .captcha.passed::after {
+  opacity: 0;
+}
+
+.captcha.passed .handle {
+  display: none;
+  opacity: 0;
+}
+
+.captcha:active .handle span {
+  -webkit-transition: none;
+  transition: none;
+}
+
+.handle {
+  position: absolute;
+  bottom: -50px;
+  left: calc((var(--puzzle-width) * 2) * -1);
+  width: calc(var(--width) + var(--puzzle-width) * 2);
+  height: 30px;
+  background-color: #eee;
+  border: 3px solid #ccc;
+  border-radius: 18px;
+  -webkit-box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.2);
+          box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.2);
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+.handle span {
+  position: absolute;
+  display: block;
+  width: var(--puzzle-width);
+  height: inherit;
+  background-color: #ddd;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: inherit;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.25), 0 2px 4px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.25), 0 2px 4px rgba(0, 0, 0, 0.3);
+  cursor: move;
+  -webkit-transform: translateX(clamp(0px, var(--moved), calc(var(--width) + var(--puzzle-width))));
+          transform: translateX(clamp(0px, var(--moved), calc(var(--width) + var(--puzzle-width))));
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+p {
+  display: none;
+  margin-top: 1rem;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+}
+
+p.show {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 540px) {
+  html {
+    font-size: 45%;
+  }
+}
+/*# sourceMappingURL=puzzle.css.map */
