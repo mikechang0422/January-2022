@@ -1,0 +1,117 @@
+@import url("https://use.fontawesome.com/releases/v5.15.3/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap");
+@import url("../font/Butler_Webfont/stylesheet.css");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Lato, Butler, "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-color: #111;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+section video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-filter: blur(10px);
+          filter: blur(10px);
+}
+
+section .box {
+  position: absolute;
+  top: calc(50% - 20rem);
+  left: calc(50% - 20rem);
+  width: 40rem;
+  height: 40rem;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+section .box div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: rotateX(-20deg) rotateY(25deg) translate3d(-7.5rem, -5rem, 15rem);
+          transform: rotateX(-20deg) rotateY(25deg) translate3d(-7.5rem, -5rem, 15rem);
+}
+
+section .box div span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #ccc;
+  border: 1px solid #0001;
+}
+
+section .box div span video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-filter: blur(0);
+          filter: blur(0);
+}
+
+section .box div span:nth-child(1) {
+  -webkit-transform: rotateX(0deg) translate3d(0, 0, 20rem);
+          transform: rotateX(0deg) translate3d(0, 0, 20rem);
+}
+
+section .box div span:nth-child(2) {
+  -webkit-transform: rotateY(90deg) translate3d(0, 0, -20rem);
+          transform: rotateY(90deg) translate3d(0, 0, -20rem);
+}
+
+section .box div span:nth-child(2) video {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+section .box div span:nth-child(3) {
+  -webkit-transform: rotateX(90deg) translate3d(0, 0, 20rem);
+          transform: rotateX(90deg) translate3d(0, 0, 20rem);
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 540px) {
+  html {
+    font-size: 45%;
+  }
+}
+/*# sourceMappingURL=videoCube.css.map */
