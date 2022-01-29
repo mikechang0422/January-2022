@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-Hent-TW">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="../style/bootstrap.min.css">
     <title>Learn Bootstrap5</title>
 </head>
+
 <body>
     <div class="container-fluid">
         <div class="row">
@@ -16,8 +18,8 @@
                 <div class="img">
                     <img src="https://picsum.photos/200/200?random=1" alt="">
                 </div>
-                <div class="text">                    
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel veniam praesentium quia maiores porro debitis doloribus! Saepe quas magnam quia eveniet vitae quibusdam itaque necessitatibus sit unde repudiandae, tenetur maxime!
+                <div class="text">
+                    當設成col-4時會依據12格下去排版，如果放不下會換行
                 </div>
             </div>
             <div class="col-4">
@@ -25,7 +27,14 @@
                     <img src="https://picsum.photos/200/200?random=1" alt="">
                 </div>
                 <div class="text">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro, tempore illo! Iusto nulla placeat excepturi natus dolorem error quod. Eos aspernatur natus quis aliquid officiis quibusdam eum quo perspiciatis alias.
+                    格線的另一個重點:斷點判斷<br>
+                    bootstrap都是用>=下去判斷的<br>
+                    不寫 0-576px (手機)<br>
+                    sm >=576px (手機-橫)<br>
+                    md >=768px (Ipad-直)<br>
+                    lg >=992px (Ipan-橫) <br>
+                    xl >=1200px (13吋筆電)<br>
+                    xxl >=1400px (15.6吋筆電)<br>
                 </div>
             </div>
             <div class="col-4">
@@ -33,17 +42,92 @@
                     <img src="https://picsum.photos/200/200?random=1" alt="">
                 </div>
                 <div class="text">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro, tempore illo! Iusto nulla placeat excepturi natus dolorem error quod. Eos aspernatur natus quis aliquid officiis quibusdam eum quo perspiciatis alias.
+                    定寬容器<br>
+                    container，除了 < 576的情況都是100%<br>
+                        其餘的會根據你設定成-sm & -md等依據上面的尺寸保留大約3%的左右留白
                 </div>
             </div>
-            <h1>hello world
-                <a href="#" class="btn btn-info">btn</a>
-            </h1>
         </div>
     </div>
+    <hr>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div class="img">
+                    <img src="https://picsum.photos/200/200?random=1" alt="">
+                </div>
+                <div class="text">
+                    當設成col時會平均分配排版，如果不會換行
+                </div>
+            </div>
+            <div class="col">
+                <div class="img">
+                    <img src="https://picsum.photos/200/200?random=1" alt="">
+                </div>
+                <div class="text">
+                    當設成col-12 col-ms-6 col-md-4 col-lg-3 col-xl-2時 col-xxl-1<br>
+                    <=576為1欄<br>
+                        >=576為2欄<br>
+                        >=768為3欄<br>
+                        >=992為4欄<br>
+                        >=1200為6欄<br>
+                        >=1400為12欄<br>
+                        但通常不會全設定
+                </div>
+            </div>
+            <div class="col">
+                <div class="img">
+                    <img src="https://picsum.photos/200/200?random=1" alt="">
+                </div>
+                <div class="text">
+                    如果不一一設定則寫在row內 <br>
+                    row-cols-12 <br>
+                    row-cols-ms-6 <br>
+                    row-cols-md-4 <br>
+                    row-cols-lg-3 <br>
+                    row-cols-xl-2 <br>
+                    row-cols-xxl-1 <br>
+                    可以統一讓子層的內容吃到設定
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="img">
+                    <img src="https://picsum.photos/200/200?random=1" alt="">
+                </div>
+                <div class="text">
+                    row 設 g-1 則是設定內容之間的padding <br>
+                    隨數字越大間距就越大<br>
+                    g-0則是沒間距
+                </div>
+                <div class="col-sm-4">
+                    <div class="img">
+                        <img src="https://picsum.photos/200/200?random=1" alt="">
+                    </div>
+                    <div class="text">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro, tempore illo! Iusto nulla placeat excepturi natus dolorem error quod. Eos aspernatur natus quis aliquid officiis quibusdam eum quo perspiciatis alias.
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="img">
+                        <img src="https://picsum.photos/200/200?random=1" alt="">
+                    </div>
+                    <div class="text">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro, tempore illo! Iusto nulla placeat excepturi natus dolorem error quod. Eos aspernatur natus quis aliquid officiis quibusdam eum quo perspiciatis alias.
+                    </div>
+                </div>
+                <!-- <h1>hello world
+                <a href="#" class="btn btn-info">btn</a>
+            </h1> -->
+            </div>
+        </div>
 
-    <script src="../plugins/popper/popper.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/learn Bootstrap5.js"></script>
+        <script src="../plugins/popper/popper.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="../js/learn Bootstrap5.js"></script>
 </body>
+
 </html>
