@@ -10,16 +10,17 @@
     <link rel="stylesheet" href="../style/bootstrap.min.css">
     <title>Learn Bootstrap5</title>
     <style>
-        .kv{
+        .kv {
             width: 100%;
             height: 98vh;
             background-image: url(https://picsum.photos/1400/900?random=10);
             background-size: cover;
             background-repeat: no-repeat;
         }
-        .kv .text{
+
+        .kv .text {
             text-align: center;
-            text-shadow: 1px 1px aliceblue,-1px 1px aliceblue,1px -1px aliceblue,-1px -1px aliceblue;
+            text-shadow: 1px 1px aliceblue, -1px 1px aliceblue, 1px -1px aliceblue, -1px -1px aliceblue;
             font-weight: 400;
         }
     </style>
@@ -64,7 +65,7 @@
         </div>
     </div>
     <hr>
-    <div class="container-fluid">
+    <div class="container-fluid my-3">
         <div class="row">
             <div class="col">
                 <div class="img">
@@ -106,7 +107,7 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid">
+    <div class="container-fluid my-3">
         <div class="row">
             <div class="col-sm-4">
                 <div class="img">
@@ -151,76 +152,193 @@
             </h1> -->
             </div>
         </div>
+    </div>
+    <!-- 常見的滿版首頁 -->
+    <div class="kv my-3">
+        <div class="container h-100">
+            <div class="row justify-content-center align-items-center h-100">
+                <div class="col-8 col-md-6">
+                    <div class="text">
+                        <h1>這是h1標題</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem, illum.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-        <!-- 常見的滿版首頁 -->
-        <div class="kv">
-            <div class="container h-100">
-                <div class="row justify-content-center align-items-center h-100">
-                    <div class="col-8 col-md-6">
-                        <div class="text">
-                            <h1>這是h1標題</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem, illum.</p>
+    <!-- offset -->
+    <div class="container-fluid my-3">
+        <div class="row">
+            <div class="text col-3" style="background-color: aqua;">
+                <p>
+                    offset就是設定margin-left<br>
+                    一樣有1-12<br>
+                    剩下的就是依照你的等分進行margin<br>
+                    範例為 col-3 與 offset-3<br>
+                    第三個正常是在第九7-8-9等分<br>
+                    但因為多了offset-3<br>
+                    則會變成10-11-12的位置
+                </p>
+            </div>
+            <div class="text col-3" style="background-color: aqua;">
+                <p>
+                    如果你要做文字壓在圖片上屬於交錯式的設計，也可以利用offset來製作<br>
+                    像是第一個設成col-8，第二個col-8 offset-4 則會一左一右，然後再做個margin-top:-100就可以重疊了
+                </p>
+            </div>
+            <div class="text col-3 offset-3" style="background-color:aquamarine;">
+                <p>
+                    我做了offset-3所以移到最後
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- img -->
+    <div class="container-fluid my-3">
+        <div class="row">
+            <div class="col-3" style="background-color: aqua;">
+                <img class="w-100" src="https://picsum.photos/200/200?random=1">
+                <p>w-100 = width:100%<br>200*200</p>
+                <p>25/50/75/100/auto/height都有先做好了</p>
+            </div>
+            <div class="col-3" style="background-color:aqua;">
+                <img class="img-fluid" src="https://picsum.photos/200/200?random=1">
+                <p>img-fluid = max-width:100%<br>200*200</p>
+            </div>
+            <div class="col-3" style="background-color:aqua;">
+                <img class="img-thumbnail" src="https://picsum.photos/200/200?random=1">
+                <p>img-thumbnail = 縮圖，圓角加邊框線<br>200*200</p>
+            </div>
+            <figure class="figure-caption col-3">
+                <img class="figure-img" src="https://picsum.photos/200/200?random=1" alt="">
+                <figcaption class="figcaption">
+                    <p>這是用figure做出來的區塊</p>
+                </figcaption>
+            </figure>
+        </div>
+    </div>
+
+    <!-- margin & padding -->
+    <div class="container-fluid my-3">
+        <div class="row">
+            <div class="text col-6">
+                <p>
+                    m = margin<br>
+                    p = padding<br>
+                    t = top<br>
+                    b = bottom<br>
+                    r = right<br>
+                    l = left<br>
+                    x = left + right<br>
+                    y = top + bottom<br>
+                    0 = *0<br>
+                    1 = *0.25<br>
+                    2 = *0.5<br>
+                    3 = *1<br>
+                    4 = *1.25<br>
+                    auto = auto<br>
+                </p>
+            </div>
+            <div class="text col-6">
+                <p>
+                    組合運用<br>
+                    mx-lg-auto<br>
+                    py-md-3
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- card -->
+    <div class="container my-3">
+        <div class="row">
+            <div class="col-3">
+                <div class="card">
+                    <img src="https://picsum.photos/200/200?random=1" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Card Title</h5>
+                        <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident, officiis!</p>
+                        <a href="#" class="btn btn-primary">Go Somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card">
+                    <img src="https://picsum.photos/200/200?random=1" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Card Title</h5>
+                        <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident, officiis!</p>
+                        <a href="#" class="btn btn-primary">Go Somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card">
+                    <img src="https://picsum.photos/200/200?random=1" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Card Title</h5>
+                        <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident, officiis!</p>
+                        <a href="#" class="btn btn-primary">Go Somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card">
+                    <img src="https://picsum.photos/200/200?random=1" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Card Title</h5>
+                        <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident, officiis!</p>
+                        <a href="#" class="btn btn-primary">Go Somewhere</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <div class="card mb-3">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="https://picsum.photos/200/200?random=5" class="w-100" style="width: 100%;height: 100%;object-fit: cover;">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Card Title</h5>
+                                <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, rem?</p>
+                                <p class="card-text">
+                                    <small class="text-muted">after 3 min</small>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="card mb-3">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="https://picsum.photos/200/200?random=5" class="w-100" style="width: 100%;height: 100%;object-fit: cover;">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Card Title</h5>
+                                <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, rem?</p>
+                                <p class="card-text">
+                                    <small class="text-muted">after 3 min</small>
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- offset -->
-        <div class="container-fluid">
-            <div class="row">
-                <div class="text col-3" style="background-color: aqua;">
-                    <p>
-                        offset就是設定margin-left<br>
-                        一樣有1-12<br>
-                        剩下的就是依照你的等分進行margin<br>
-                        範例為 col-3 與 offset-3<br>
-                        第三個正常是在第九7-8-9等分<br>
-                        但因為多了offset-3<br>
-                        則會變成10-11-12的位置
-                    </p>
-                </div>
-                <div class="text col-3" style="background-color: aqua;">
-                    <p>
-                        如果你要做文字壓在圖片上屬於交錯式的設計，也可以利用offset來製作<br>
-                        像是第一個設成col-8，第二個col-8 offset-4 則會一左一右，然後再做個margin-top:-100就可以重疊了
-                    </p>
-                </div>
-                <div class="text col-3 offset-3" style="background-color:aquamarine;">
-                    <p>
-                        我做了offset-3所以移到最後
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <!-- img -->
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-3" style="background-color: aqua;">
-                    <img class="w-100" src="https://picsum.photos/200/200?random=1">
-                    <p>w-100 = width:100%<br>200*200</p>
-                    <p>25/50/75/100/auto/height都有先做好了</p>
-                </div>
-                <div class="col-3" style="background-color:aqua;">
-                    <img class="img-fluid" src="https://picsum.photos/200/200?random=1">
-                    <p>img-fluid = max-width:100%<br>200*200</p>
-                </div>
-                <div class="col-3" style="background-color:aqua;">
-                    <img class="img-thumbnail" src="https://picsum.photos/200/200?random=1">
-                    <p>img-thumbnail = 縮圖，圓角加邊框線<br>200*200</p>
-                </div>
-                <figure class="figure-caption col-3">
-                    <img class="figure-img" src="https://picsum.photos/200/200?random=1" alt="">
-                    <figcaption class="figcaption">
-                        <p>這是用figure做出來的區塊</p>
-                    </figcaption>
-                </figure>
-            </div>
-        </div>
-        <script src="../plugins/popper/popper.min.js"></script>
-        <script src="../js/bootstrap.min.js"></script>
-        <script src="../js/learn Bootstrap5.js"></script>
+    </div>
+    <script src="../plugins/popper/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/learn Bootstrap5.js"></script>
 </body>
 
 </html>
