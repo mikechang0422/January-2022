@@ -712,9 +712,73 @@
             </div>
         </div>
     </div>
+
+    <!-- toolTip -->
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-12 text-center">
+                <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">
+                    Tooltip on top
+                </button>
+                <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="right" title="Tooltip on right">
+                    Tooltip on right
+                </button>
+                <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tooltip on bottom">
+                    Tooltip on bottom
+                </button>
+                <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="left" title="Tooltip on left">
+                    Tooltip on left
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- popover -->
+    <div class="container my-3">
+        <div class="row">
+            <div class="col-12 text-center">
+                <button type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover" title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- callapse -->
+    <div class="container my-3">
+        <div class="row">
+            <div class="col-12 col-md-6 text-center">
+                <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    Link with href
+                </a>
+                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    Button with data-bs-target
+                </button>
+                <div class="collapse" id="collapseExample">
+                    <div class="card card-body">
+                        Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-3">
+        <div class="row">
+        </div>
+    </div>
     <script src="../plugins/popper/popper.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/learn Bootstrap5.js"></script>
+    <script>
+        // tooltip
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+        // popover
+        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+            return new bootstrap.Popover(popoverTriggerEl)
+        })
+    </script>
 </body>
 
 </html>
