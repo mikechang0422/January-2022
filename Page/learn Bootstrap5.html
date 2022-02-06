@@ -66,6 +66,7 @@
             </div>
         </div>
     </nav>
+
     <!-- breadcrumb -->
     <div class="container my-3">
         <div class="row">
@@ -78,6 +79,51 @@
             </div>
         </div>
     </div>
+
+    <!-- carousel -->
+    <div class="conatainer my-3">
+        <div class="row">
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://picsum.photos/1300/600?random=13" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>First slide label</h5>
+                            <p>Some representative placeholder content for the first slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://picsum.photos/1300/600?random=12" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Second slide label</h5>
+                            <p>Some representative placeholder content for the second slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://picsum.photos/1300/600?random=11" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Third slide label</h5>
+                            <p>Some representative placeholder content for the third slide.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
     <!-- layout -->
     <div class="container-fluid mt-5">
         <div class="row">
@@ -205,6 +251,61 @@
             </div>
         </div>
     </div>
+
+    <!-- display -->
+    <div class="container my-3">
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <p>d = display</p>
+                <p>block = d-block</p>
+                <p>inline = d-inline</p>
+                <p>table = d-table</p>
+                <p>flex = d-flex</p>
+                <p>hidden = d-none</p>
+                <p>size = xs md lg xl xxl</p>
+            </div>
+            <div class="col-12 col-md-6">
+                <p>for example</p>
+                <p>
+                    d-none d-md-block <br>
+                    正常隱藏但在md以上已block顯示
+                </p>
+                <p>
+                    d-block d-md-none<br>
+                    正常顯示但大於md消失
+                </p>
+                <p>
+                    d-block d-md-inline<br>
+                    正常block但大於md則改inline
+                </p>
+                <p>
+                    麻煩一點的<br>
+                    d-block d-md-none d-lg-block<br>
+                    正常block / md~lg之間消失 / 大於lg則block
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- flex -->
+    <div class="container my-3">
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <p>d-flex後可以添加以下設定</p>
+                <p>flex-row & flex-column<br>直向 & 橫向設定</p>
+                <p>justify-content系列</p>
+                <p>align-items系列</p>
+                <p>flex-nowrap 改為不換行</p>
+                <p>order系列</p>
+            </div>
+            <div class="col-12 col-md-6">
+                <p>For Example</p>
+                <p>d-flex flex-row flex-md-column jutify-content-start jutify-content-md-end</p>
+                <p>手機時為直向，平板以上為橫向，手機時向左或上靠齊，平板以上時向右下靠齊</p>
+            </div>
+        </div>
+    </div>
+
     <!-- 常見的滿版首頁 -->
     <div class="kv my-3">
         <div class="container h-100">
@@ -502,6 +603,7 @@
             </div>
         </div>
     </div>
+
     <!-- list-group -->
     <div class="container my-3">
         <div class="row">
@@ -557,6 +659,7 @@
             </div>
         </div>
     </div>
+
     <!-- pagination -->
     <div class="container my-3">
         <div class="row">
@@ -575,6 +678,38 @@
                     </a>
                 </li>
             </ul>
+        </div>
+    </div>
+
+    <!-- modal -->
+    <div class="container my-3">
+        <div class="row">
+            <div class="col-12 text-center">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    Launch static backdrop modal
+                </button>
+    
+                <!-- Modal -->
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                modal style modal-dialog-centered<br>
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem fuga tempore laboriosam. Error dicta dolores veritatis tenetur veniam, optio aut. Repudiandae, sapiente nesciunt officia dolore, aut dicta ratione minus perspiciatis corrupti quasi laudantium odit nam cupiditate rerum enim harum sequi! Rem, repudiandae. Obcaecati, dignissimos, quod molestias possimus eveniet eaque voluptatibus ut repellat quos earum perspiciatis necessitatibus saepe explicabo quibusdam laudantium natus eum sunt doloremque aliquid id rem nam similique consequatur. Voluptatem natus modi sunt pariatur illo ipsum, odio, eum commodi recusandae blanditiis nulla praesentium. Officiis, natus aliquid. Assumenda tenetur, maiores, consequuntur perferendis odio doloremque obcaecati error consequatur dignissimos deleniti perspiciatis voluptas asperiores quisquam adipisci quo dicta minus. Libero fugit quisquam natus quis corrupti, tempora ab animi fugiat? Assumenda voluptatibus repellendus quae maiores cumque libero ut perferendis nulla, accusamus sint molestias eligendi at quasi illum id distinctio ipsa reprehenderit quisquam, ex beatae accusantium iusto. Sequi, doloribus. Recusandae sed, ratione perspiciatis quasi beatae earum ab vitae incidunt? Maxime placeat, culpa sunt quam magnam ipsam impedit voluptatum cumque et inventore obcaecati ducimus nostrum laudantium maiores tenetur cupiditate veniam aliquam neque blanditiis aliquid nihil eveniet dolorem cum. Aspernatur, facilis a ducimus cum id ut esse sed alias veniam amet saepe iure vitae culpa itaque laudantium adipisci dolore corrupti excepturi perspiciatis asperiores? Nam commodi cum minima, aperiam reprehenderit maxime facere accusantium iste autem. Quaerat consequuntur velit quam sed incidunt aperiam error rerum eos reiciendis, laudantium autem deserunt asperiores, doloremque repellat voluptatum facilis consequatur hic blanditiis laborum illum perspiciatis sequi assumenda pariatur. Earum facilis illo perferendis quia veritatis voluptates aliquid doloremque laborum placeat odio tenetur consequatur, delectus, est iure quas eius. Ipsam dolores distinctio iste ab sapiente aperiam similique quis voluptates! Natus explicabo adipisci reprehenderit sunt quia cupiditate corporis temporibus voluptates maiores enim. Nihil sint libero consectetur numquam sunt magni aut? Dolorem fugiat sint, corporis deserunt recusandae necessitatibus impedit voluptate accusantium eos, molestiae laboriosam veniam delectus reprehenderit corrupti. Fugiat, porro error. Excepturi qui quidem expedita reprehenderit. Optio earum impedit, perferendis laborum neque odio inventore voluptatibus explicabo eveniet iusto dolores modi qui quasi, magnam laudantium, ipsam facere maxime accusantium rem pariatur obcaecati suscipit. Nemo, aperiam earum doloribus placeat perferendis vero fugit accusamus, ducimus laboriosam, iusto maxime saepe. Nemo mollitia aperiam officiis optio omnis cumque. Voluptatum fugit itaque quaerat! Accusamus sed incidunt odit vitae pariatur laboriosam illum rerum deserunt aspernatur praesentium tempora placeat debitis libero accusantium voluptatum ut, quas temporibus eius culpa aliquam cumque qui. Asperiores officia officiis alias perspiciatis, ut quod quidem vero rerum illum voluptate, qui odit eveniet laudantium? Beatae cumque doloribus sequi inventore modi nobis tenetur totam, ea fugiat aliquid eaque accusamus maxime temporibus rem ab maiores! Iste et quo hic necessitatibus unde id natus sed. Quia eligendi, perferendis veniam excepturi id eos magni cum omnis voluptas eum. Illo alias nostrum quaerat, quasi minus fuga neque molestiae porro itaque autem! Assumenda perferendis dicta sed a porro eos consectetur nesciunt magnam debitis doloremque consequatur fuga, quidem eum aperiam voluptates incidunt officiis fugiat? Eum dolore totam asperiores dolorum commodi? Nisi in voluptatem tempora dolorum maxime consectetur amet?
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Understood</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <script src="../plugins/popper/popper.min.js"></script>
