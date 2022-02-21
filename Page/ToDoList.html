@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-Hent-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mike">
+    <link rel="stylesheet" href="../style/reset.css">
+    <link rel="stylesheet" href="../style/bootstrap.min.css">
+    <link rel="stylesheet" href="../style/todolist.css">
+
+    <title>TO DO LIST</title>
+</head>
+
+<body>
+    <div class="warpper">
+        <div class="container">
+            <h1>TODO LIST</h1>
+            <div class="card input">
+                <input id="inputVal" type="text" placeholder="請輸入待辦事項" />
+                <a href="#" class="btn_add" id="addTodoBtn">+</a>
+            </div>
+            <div class="card card_list">
+                <ul class="tab" id="tab">
+                    <li class="active" data-tab="all">全部</li>
+                    <li data-tab="work">待完成</li>
+                    <li data-tab="done">已完成</li>
+                </ul>
+                <div class="cart_content">
+                    <ul class="list" id="todoList">
+                    </ul>
+                    <div class="list_footer">
+                        <p><span id="workNum"></span> 個待完成項目</p>
+                        <a href="#" id="deleteBtn">清除已完成項目</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../plugins/popper/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/todolist.js"></script>
+</body>
+
+</html>
