@@ -1,0 +1,158 @@
+@import url("https://use.fontawesome.com/releases/v5.15.3/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap");
+@import url("../font/Butler_Webfont/stylesheet.css");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+  font-family: Lato, Butler, "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-color: #c9c9c9;
+}
+
+.card {
+  padding: 1rem;
+  width: 40rem;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  cursor: pointer;
+}
+
+.card .card_inner {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+
+.card .front_face {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.card .front_face img {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.card:hover .card_inner {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.back_face {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  background-color: #0cb3b9;
+  border-radius: 1rem;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.back_face h2 {
+  margin-top: 1rem;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 1.2;
+}
+
+.back_face p {
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 1.05;
+}
+
+.back_face .social_media i {
+  margin: 1rem 0.5rem;
+  width: 2rem;
+  height: 2rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #39ebf2;
+  border-radius: 50%;
+  line-height: 2rem;
+}
+
+.back_face .social_media a:hover i {
+  background-color: #69f0f5;
+}
+
+.back_face .btn {
+  padding: 0.5rem 1.5rem;
+  margin-top: 1rem;
+  color: #fff;
+  background-color: #39ebf2;
+  border: 1px solid;
+  border-radius: 10px;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+
+.back_face .btn:hover {
+  background-color: #69f0f5;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 540px) {
+  html {
+    font-size: 45%;
+  }
+}
+/*# sourceMappingURL=3dCard.css.map */
