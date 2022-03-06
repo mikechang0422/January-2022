@@ -1,0 +1,176 @@
+@import url("https://use.fontawesome.com/releases/v5.15.3/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap");
+@import url("../font/Butler_Webfont/stylesheet.css");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+  font-family: Lato, Butler, "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-color: #c9c9c9;
+}
+
+.app {
+  width: 100%;
+  height: 100%;
+}
+
+.section {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #000;
+}
+
+.txt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 10rem;
+  letter-spacing: 3rem;
+}
+
+.bg_antiquewhite {
+  background-color: #faebd733;
+}
+
+.sticky {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: 0;
+  left: 0;
+}
+
+.static {
+  position: static !important;
+}
+
+.phone {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: scale(var(--scale));
+          transform: scale(var(--scale));
+}
+
+.phone > * {
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
+.phone > img {
+  width: 60%;
+  -webkit-clip-path: inset(22% 9% round 5%);
+          clip-path: inset(22% 9% round 5%);
+}
+
+.phone > .rect {
+  padding-top: 25%;
+  width: 50%;
+  height: 0;
+  color: aqua;
+  border: 1rem solid;
+  border-radius: 7rem;
+}
+
+#section2 {
+  --scale: 3;
+}
+
+#section3 {
+  --scale: 1;
+}
+
+@media (max-width: 1750px) {
+  .phone img {
+    -webkit-clip-path: inset(22% 9% round 6%);
+            clip-path: inset(22% 9% round 6%);
+  }
+}
+
+@media (max-width: 1550px) {
+  .phone img {
+    -webkit-clip-path: inset(22% 9% round 7%);
+            clip-path: inset(22% 9% round 7%);
+  }
+}
+
+@media (max-width: 1350px) {
+  .phone img {
+    -webkit-clip-path: inset(22% 9% round 8%);
+            clip-path: inset(22% 9% round 8%);
+  }
+}
+
+@media (max-width: 1250px) {
+  .phone img {
+    -webkit-clip-path: inset(22% 9% round 10%);
+            clip-path: inset(22% 9% round 10%);
+  }
+}
+
+@media (max-width: 1050px) {
+  .phone img {
+    -webkit-clip-path: inset(22% 9% round 13%);
+            clip-path: inset(22% 9% round 13%);
+  }
+}
+
+@media (max-width: 950px) {
+  .phone img {
+    -webkit-clip-path: inset(22% 9% round 14%);
+            clip-path: inset(22% 9% round 14%);
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 55%;
+  }
+  .phone img {
+    -webkit-clip-path: inset(22% 9% round 15%);
+            clip-path: inset(22% 9% round 15%);
+  }
+}
+
+@media (max-width: 668px) {
+  .phone img {
+    -webkit-clip-path: inset(22% 9% round 18%);
+            clip-path: inset(22% 9% round 18%);
+  }
+}
+
+@media (max-width: 540px) {
+  html {
+    font-size: 45%;
+  }
+}
+/*# sourceMappingURL=ScrollStyle.css.map */
