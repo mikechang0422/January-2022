@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-Hent-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mike">
+    <link rel="stylesheet" href="../style/reset.css">
+    <link rel="stylesheet" href="../style/GridLayout.css">
+    <title>FlexAndGrid</title>
+</head>
+<body>
+    <section class="demo1">
+        <div class="a1">寬 auto + 100px<br>高 200px + auto + 20%</div>
+        <div class="a2">寬 100%<br>高 100px</div>
+        <div class="a3">寬 200px<br>高 200px + auto + 20%</div>
+    </section>
+    <section class="demo2">
+        <div class="b1">如果有gap則寬高要計算或者有auto或fr<br>寬 2fr<br>高 100%</div>
+        <div class="b2">新單位fr代表一等分，如果都是fr則依照比例提供像這全部是4fr所以2fr代表50%<br>寬 2fr<br>高 100px + 1fr</div>
+        <div class="b3">如果其中只有一個是1fr則該1fr = auto<br>. 代表留白<br>寬 2fr<br>高 50px + 200px</div>
+    </section>
+    <section class="demo3">
+        <div class="b1"><br>寬 第1到第3條格線<br>高 第1到第3條格線</div>
+        <div class="b2"><br>寬 第3到第5條格線<br>高 第1到第3條格線</div>
+        <div class="b3"><br>寬 第1到第3條格線<br>高 第3到第5條格線</div>
+    </section>
+    <section class="demo4">
+        <div class="item">
+            <img src="https://picsum.photos/200/200?random=1" alt="">
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/200/200?random=1" alt="">
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/200/200?random=1" alt="">
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/200/200?random=1" alt="">
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/200/200?random=1" alt="">
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/200/200?random=1" alt="">
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/200/200?random=1" alt="">
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/200/200?random=1" alt="">
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/200/200?random=1" alt="">
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/200/200?random=1" alt="">
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/200/200?random=1" alt="">
+        </div>
+
+        <div class="item">
+            <img src="https://picsum.photos/200/200?random=1" alt="">
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/200/200?random=1" alt="">
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/200/200?random=1" alt="">
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/200/200?random=1" alt="">
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/200/200?random=1" alt="">
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/200/200?random=1" alt="">
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/200/200?random=1" alt="">
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/200/200?random=1" alt="">
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/200/200?random=1" alt="">
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/200/200?random=1" alt="">
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/200/200?random=1" alt="">
+        </div>
+    </section>
+    <section class="demo5">
+        <div class="b1"><br>跟demo3的差別在於格線已寫好不採用自動格線</div>
+        <div class="b2"><br>這時就可以用 " - " 號來代表倒數第幾條線</div>
+        <div class="b3"><br>如果採用自動格線則會認為 " - " 號代表1以前還有其他格線會自動產生</div>
+        <div class="b4"><br>寬 倒數第1到倒數第2條格線(也可以用負數來寫，代表從後面算)<br>高 第3到第5條格線</div>
+    </section>
+    <section class="demo6">
+        <div class="b1"><br>span 代表橫跨幾格<br>寬 span 2 /3<br>高 1/span 2</div>
+        <div class="b2"><br>知道頭或尾就可以用span往前或後延展，同時還可以有覆蓋效應</div>
+    </section>
+    <section class="demo7">
+        <div class="b1">用grid-area就可以一次把rows&colums一起寫</div>
+        <div class="b2">columns start / rows start /<br>columns end / rows end </div>
+        <div class="b3">也支援span<br>訣竅:記左上角位置</div>
+    </section>
+    <section class="demo8">
+        <div class="b1">如果沒有設定位置則照程式碼排序順排</div>
+        <div class="b2">也支援order，預設0</div>
+        <div class="b3">order: 1 = 往後</div>
+        <div class="b4">order: -1 = 最前</div>
+    </section>
+    <section class="demo9">
+        <div class="b1">對於平均分配的格子可以用 " repeat() "來設計</div>
+        <div class="b2">repeat(格數,每格大小)</div>
+        <div class="b3">每隔大小也可用1fr代表每隔都算1等分</div>
+    </section>
+    <section class="demo10">
+        <div class="b1">用grid-template 來一次寫完 colums 跟 rows</div>
+        <div class="b2">先columns 在 rows</div>
+        <div class="b3">grid可同時支援 px % 1fr等單位</div>
+    </section>
+</body>
+</html>

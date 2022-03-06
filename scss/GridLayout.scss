@@ -1,0 +1,348 @@
+@import url("https://use.fontawesome.com/releases/v5.15.3/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap");
+@import url("../font/Butler_Webfont/stylesheet.css");
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    width: 100%;
+    min-height: 100vh;
+    font-family: Lato, Butler, "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    background-color: #c9c9c9;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.demo1 {
+    display: grid;
+    width: 800px;
+    height: 800px;
+    font-size: 3rem;
+    background-color: brown;
+    outline: 2px solid;
+    grid-template-rows: 100px 100px auto 100px;
+    grid-template-columns: 200px auto 20% 100px;
+    grid-template-areas:
+        "B3 B3 B1 B1"
+        "B3 B3 B1 B1"
+        "B3 B3 B1 B1"
+        "B2 B2 B2 B2";
+
+    .a1 {
+        padding: 1rem;
+        background-color: antiquewhite;
+        grid-area: B1;
+    }
+
+    .a2 {
+        padding: 1rem;
+        background-color: aqua;
+        grid-area: B2;
+    }
+
+    .a3 {
+        padding: 1rem;
+        background-color: aquamarine;
+        grid-area: B3;
+    }
+}
+
+.demo2 {
+    display: grid;
+    margin-top: 2rem;
+    width: 1200px;
+    height: 800px;
+    font-size: 3rem;
+    background-color: brown;
+    outline: 2px solid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 100px 1fr 50px 200px;
+    grid-template-areas:
+        "B2 B2 B1 B1"
+        "B2 B2 B1 B1"
+        "B3 B3 B1 B1"
+        "B3 B3 . .";
+    grid-gap: 1rem;
+
+    .b1 {
+        padding: 1rem;
+        background-color: antiquewhite;
+        grid-area: B1;
+    }
+
+    .b2 {
+        padding: 1rem;
+        background-color: aqua;
+        grid-area: B2;
+    }
+
+    .b3 {
+        padding: 1rem;
+        background-color: aquamarine;
+        grid-area: B3;
+    }
+}
+
+.demo3 {
+    display: grid;
+    margin-top: 2rem;
+    width: 600px;
+    height: 600px;
+    font-size: 3rem;
+    background-color: brown;
+    outline: 2px solid;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+
+    .b1 {
+        padding: 1rem;
+        background-color: antiquewhite;
+        grid-row: 1/3;
+        grid-column: 1/3;
+    }
+
+    .b2 {
+        padding: 1rem;
+        background-color: aqua;
+        grid-row: 1/3;
+        grid-column: 3/5;
+    }
+
+    .b3 {
+        padding: 1rem;
+        background-color: aquamarine;
+        grid-row: 3/5;
+        grid-column: 1/3;
+    }
+}
+
+.demo4 {
+    display: grid;
+    margin-top: 2rem;
+    width: 80vw;
+    grid-gap: 6px;
+    outline: 3px solid saddlebrown;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+
+    .item img {
+        width: 100%;
+        vertical-align: top;
+        outline: 1px solid;
+    }
+}
+
+.demo5 {
+    display: grid;
+    margin-top: 2rem;
+    width: 600px;
+    height: 600px;
+    font-size: 3rem;
+    background-color: brown;
+    outline: 2px solid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+
+    .b1 {
+        padding: 1rem;
+        background-color: antiquewhite;
+        grid-row: 1/3;
+        grid-column: 1/3;
+    }
+
+    .b2 {
+        padding: 1rem;
+        background-color: aqua;
+        grid-row: 1/3;
+        grid-column: 3/5;
+    }
+
+    .b3 {
+        padding: 1rem;
+        background-color: aquamarine;
+        grid-row: 3/5;
+        grid-column: 1/3;
+    }
+
+    .b4 {
+        padding: 1rem;
+        background-color: cadetblue;
+        grid-row: 3/5;
+        grid-column: 3/-1;
+    }
+}
+
+.demo6 {
+    display: grid;
+    margin-top: 2rem;
+    width: 600px;
+    height: 600px;
+    font-size: 3rem;
+    background-color: brown;
+    outline: 2px solid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+
+    .b1 {
+        padding: 1rem;
+        background-color: antiquewhite;
+        grid-row: 1/span 2;
+        grid-column: span 2/3;
+    }
+
+    .b2 {
+        padding: 1rem;
+        background-color: aqua;
+        grid-row: span 3/-1;
+        grid-column: span 3/ -1;
+    }
+}
+
+.demo7 {
+    display: grid;
+    margin-top: 2rem;
+    width: 600px;
+    height: 600px;
+    font-size: 3rem;
+    background-color: brown;
+    outline: 2px solid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+
+    .b1 {
+        padding: 1rem;
+        background-color: antiquewhite;
+        grid-area: 1/1/3/3;
+    }
+
+    .b2 {
+        padding: 1rem;
+        background-color: aqua;
+        grid-area: 1/3/3/ -1;
+    }
+
+    .b3 {
+        padding: 1rem;
+        background-color: aquamarine;
+        grid-area: 2/2/ -1/ -1;
+    }
+}
+
+.demo8 {
+    display: grid;
+    margin-top: 2rem;
+    width: 1000px;
+    height: 300px;
+    font-size: 3rem;
+    background-color: brown;
+    outline: 2px solid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    .b1 {
+        padding: 1rem;
+        background-color: antiquewhite;
+    }
+
+    .b2 {
+        padding: 1rem;
+        background-color: aqua;
+    }
+
+    .b3 {
+        padding: 1rem;
+        background-color: aquamarine;
+        order: 1;
+    }
+
+    .b4 {
+        padding: 1rem;
+        background-color: cadetblue;
+        order: -1;
+    }
+}
+
+.demo9 {
+    display: grid;
+    margin-top: 2rem;
+    width: 600px;
+    height: 600px;
+    font-size: 3rem;
+    background-color: brown;
+    outline: 2px solid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(4, 1fr);
+
+    .b1 {
+        padding: 1rem;
+        background-color: antiquewhite;
+        grid-area: 1/1/3/3;
+    }
+
+    .b2 {
+        padding: 1rem;
+        background-color: aqua;
+        grid-area: 1/3/3/ -1;
+    }
+
+    .b3 {
+        padding: 1rem;
+        background-color: aquamarine;
+        grid-area: 3/1/ -1/ -1;
+    }
+}
+
+.demo10 {
+    display: grid;
+    margin-top: 2rem;
+    width: 600px;
+    height: 600px;
+    font-size: 3rem;
+    background-color: brown;
+    outline: 2px solid;
+    grid-template: repeat(4, 25%) / 100px 1fr 20% 1fr;
+
+    .b1 {
+        padding: 1rem;
+        background-color: antiquewhite;
+        grid-area: 1/1/3/3;
+    }
+
+    .b2 {
+        padding: 1rem;
+        background-color: aqua;
+        grid-area: 1/3/3/ -1;
+    }
+
+    .b3 {
+        padding: 1rem;
+        background-color: aquamarine;
+        grid-area: 3/1/ -1/ -1;
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 540px) {
+    html {
+        font-size: 45%;
+    }
+}
