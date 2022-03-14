@@ -1,0 +1,48 @@
+@import url("https://use.fontawesome.com/releases/v5.15.3/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap");
+@import url("../font/Butler_Webfont/stylesheet.css");
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Lato, Butler, "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    background-color: #c9c9c9;
+}
+
+section {
+    margin: 5rem 0;
+    width: 400px;
+    height: 400px;
+    background-color: antiquewhite;
+    border: 1px solid;
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 540px) {
+    html {
+        font-size: 45%;
+    }
+}
