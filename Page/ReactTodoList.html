@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-Hent-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mike">
+    <link rel="stylesheet" href="../style/reset.css">
+    <title>ReactTodoList</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            width: 100%;
+        }
+        .done{
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="app"></div>
+
+    <!-- 注意：在發佈應用程式前，請把「development.js」替換成「production.min.js」。 -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/babel">
+        class TodoList extends React.Component{
+            constructor(props){
+                super(props)
+                this.state = {
+                    title:`TodoList - React!!`,
+                    input:'',
+                        list:[
+                            {
+                                id:1,
+                                text:'123',
+                                done:false
+                            },
+                            {
+                                id:2,
+                                text:'456',
+                                done:true
+                            }
+                        ]
+                };
+                this.completeHandler = this.completeHandler.bind(this);
+                this.deleteHandler = this.deleteHandler.bind(this);
+                this.addHandler = this.addHandler.bind(this);
+                this.inputHandler = this.inputHandler.bind(this);
+            }
+
+            completeHandler(id){
+                const newList = this.state.list.map((todo) =>{
+                    if(todo.id === id) todo.done = !todo.done
+                    return todo
+                })
+                this.setState({list:newList})
+            }
+
+            deleteHandler(id){
+                const newList = this.state.list.filter((todo) =>{
+                    return todo.id !== id
+                })
+                this.setState({list:newList})
+            }
+
+            addHandler(){
+                this.setState({
+                    input:'',list:this.state.list.concat([
+                        {
+                            id:Date.now(),
+                            text:this.state.input,
+                            done:false
+                        }
+                    ])})
+                    this.setState({})
+            }
+
+            inputHandler(e){
+                this.setState({input:e.target.value})
+            }
+
+            render() {
+                return <div>
+                    <h1>{this.state.title}</h1>
+                    <p>
+                        <input type="text" value={this.state.input}
+                        onChange={this.inputHandler} />
+                        <button onClick={this.addHandler}>Add</button>
+                    </p>
+                    <ul>{this.state.list.map((item) => {
+                        return  <li key={item.id}
+                        className={item.done ? 'done' : ''}>
+                            <input type="checkbox" checked={item.done} onChange={() => this.completeHandler(item.id)} />
+                            {item.text}
+                            <button onClick={() => this.deleteHandler(item.id)}>Delete</button>
+                        </li>
+                    })}
+                    </ul>
+                </div>
+
+            }
+        }
+
+        ReactDOM.render(
+            <TodoList />
+            // <h1>todoList</h1>
+            ,
+            document.getElementById('app')
+        );
+
+    </script>
+</body>
+
+</html>
